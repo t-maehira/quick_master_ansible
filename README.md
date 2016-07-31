@@ -12,5 +12,18 @@
 
 ```
 vagrant up
-vagrant ssh ansible-server
 ```
+
+
+# 確認
+
+```
+vagrant ssh ansible-server
+ls /vagrant
+exit
+vagrant ssh www-server
+ls /vagrant
+exit
+```
+
+2台それぞれで ls /vagrant して、このリポジトリが見えていれば、OKです。

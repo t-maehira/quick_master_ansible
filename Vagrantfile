@@ -10,7 +10,6 @@ Vagrant.configure("2") do |config|
     node.vm.synced_folder "./quick_master_provision", "/quick_master_provision", :mount_options => ['dmode=775', 'fmode=664']
     node.vm.provision "shell", inline: <<-SHELL
       sudo yum -y install epel-release
-      sudo yum -y --enablerepo=epel install ansible
     SHELL
   end
 
