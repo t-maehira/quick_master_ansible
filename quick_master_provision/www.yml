@@ -1,0 +1,9 @@
+---
+- hosts: www
+  become: true
+  become_method: sudo
+  vars_files:
+    - group_vars/www.yml
+  roles:
+    - common
+    - nginx
