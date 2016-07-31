@@ -11,7 +11,6 @@ Vagrant.configure("2") do |config|
     node.vm.provision "shell", inline: <<-SHELL
       sudo yum -y install epel-release
       sudo yum -y --enablerepo=epel install ansible
-      sudo yum -y update
     SHELL
   end
 
@@ -21,7 +20,6 @@ Vagrant.configure("2") do |config|
     node.vm.network :private_network, ip: "192.168.66.62"
     node.vm.provision "shell", inline: <<-SHELL
       sudo yum -y install epel-release
-      sudo yum -y update
     SHELL
   end
 
